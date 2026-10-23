@@ -1,0 +1,43 @@
+{
+  "model_path": "models/granite-speech-5.0-2b",
+  "model_id": "ibm-granite/granite-speech-5.0-2b",
+  "ctc_model_id": "ibm-granite/granite-speech-5.0-470m-turboctc",
+  "tasks": [
+    {
+      "id": "meeting_intelligence",
+      "name": "Townhall Address & Multi-Speaker ASR with Keyword Biasing",
+      "audio_file": "inputs/townhall_speech.wav",
+      "audio_description": "Live presidential union townhall audio with ambient crowd noise and multiple speakers",
+      "language": "English",
+      "keywords": [
+        "union president",
+        "infrastructure plan",
+        "foundry",
+        "plant",
+        "Oakland Air Protection",
+        "America"
+      ]
+    },
+    {
+      "id": "turbo_ctc_speed",
+      "name": "Ultra-Fast Edge Streaming ASR (Turbo CTC)",
+      "audio_file": "inputs/multilingual_sample.wav",
+      "audio_description": "Official IBM Granite 16kHz multilingual benchmark recording (24.94s)",
+      "hardware": "Edge CPU Inference"
+    },
+    {
+      "id": "cross_border_translation",
+      "name": "Cross-Border Speech Translation Hub (AST)",
+      "audio_file": "inputs/multilingual_sample.wav",
+      "audio_description": "French spoken audio translated directly into punctuated English text",
+      "source_language": "French",
+      "target_language": "English",
+      "keywords": [
+        "Timothy",
+        "servant",
+        "monarch",
+        "Peshire"
+      ]
+    }
+  ]
+}

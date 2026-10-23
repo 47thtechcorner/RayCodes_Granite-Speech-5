@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Granite Speech 5.0 Speech Intelligence</title>
+  <style>
+    body { background:#06080e; color:#d4dbe8; font-family:-apple-system, sans-serif; padding:30px; display:flex; justify-content:center; }
+    .box { max-width:860px; width:100%; background:#0c101a; border:1px solid #1c273c; border-radius:16px; padding:28px; }
+    h1 { color:#fff; font-size:1.4rem; margin-bottom:4px; }
+    .badge { display:inline-block; background:rgba(15,98,254,0.2); color:#00d2ff; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:700; margin-bottom:20px; }
+    h2 { color:#00e676; font-size:1.1rem; margin:24px 0 12px 0; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Granite Speech 5.0: Multi-Speaker Intelligence & Transcription</h1>
+    <div class="badge">Model: {{ model_id }} · Audio: {{ audio_file }} · 2,000-Term KWB Active</div>
+    <h2>Speaker-Attributed Timestamped Transcript</h2>
+    {{ turns_html }}
+    <h2>Extracted Policy Insights & Key Next Steps</h2>
+    <ul style="padding-left:20px;">
+      {{ actions_html }}
+    </ul>
+  </div>
+</body>
+</html>
